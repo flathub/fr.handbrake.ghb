@@ -9,6 +9,7 @@
         "--socket=x11", 
         "--socket=wayland", 
         "--filesystem=xdg-run/dconf", 
+        "--filesystem=xdg-run/gvfs", 
         "--filesystem=~/.config/dconf:ro", 
         "--talk-name=ca.desrt.dconf", 
         "--talk-name=org.gtk.vfs.*", 
@@ -95,8 +96,8 @@
             ], 
             "sources": [
                 {
-                    "url": "https://download.handbrake.fr/releases/1.2.0/HandBrake-1.2.0-source.tar.bz2", 
-                    "sha256": "113b398a50147d48c8777e6ff2c4de6825af5f1079b3822e41bf0eacec9c940d", 
+                    "url": "https://download.handbrake.fr/releases/1.2.1/HandBrake-1.2.1-source.tar.bz2", 
+                    "sha256": "00316eec7bb29b88b8dd11b14581c99c35fd7a315f5bc8cc7f1eb144b2fa783d", 
                     "type": "archive", 
                     "strip-components": 1
                 }, 
