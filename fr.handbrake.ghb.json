@@ -1,13 +1,15 @@
 {
     "app-id": "fr.handbrake.ghb", 
-    "runtime": "org.freedesktop.Platform", 
-    "runtime-version": "1.6", 
-    "sdk": "org.freedesktop.Sdk", 
+    "runtime": "org.gnome.Platform", 
+    "runtime-version": "3.34", 
+    "sdk": "org.gnome.Sdk", 
     "command": "ghb", 
     "finish-args": [
+        "--device=dri", 
         "--share=ipc", 
         "--socket=x11", 
         "--socket=wayland", 
+        "--filesystem=host", 
         "--filesystem=xdg-run/dconf", 
         "--filesystem=xdg-run/gvfs", 
         "--filesystem=~/.config/dconf:ro", 
@@ -16,8 +18,7 @@
         "--env=DCONF_USER_CONFIG_DIR=.config/dconf", 
         "--env=PATH=/app/bin:/usr/bin:/app/extensions/bin", 
         "--env=JAVA_HOME=/app/extensions/jre", 
-        "--env=GIO_EXTRA_MODULES=/app/lib/gio/modules", 
-        "--filesystem=host"
+        "--env=GIO_EXTRA_MODULES=/app/lib/gio/modules"
     ], 
     "add-extensions": {
         "fr.handbrake.plugin": {
@@ -32,39 +33,12 @@
     }, 
     "modules": [
         {
-            "name": "gvfs", 
-            "cleanup": [
-                "/libexec/*", 
-                "/share/dbus-1/services/*", 
-                "/share/gvfs/mounts"
-            ], 
-            "config-opts": [
-                "--disable-hal", 
-                "--disable-gdu", 
-                "--disable-gcr", 
-                "--disable-obexftp", 
-                "--disable-avahi", 
-                "--disable-documentation", 
-                "--disable-admin"
-            ], 
+            "name": "numactl", 
             "sources": [
                 {
                     "type": "archive", 
-                    "url": "https://download.gnome.org/sources/gvfs/1.36/gvfs-1.36.1.tar.xz", 
-                    "sha256": "3840dff386c2c8a445337bea4ade0eb71339efaff8602767659fa2896792f026"
-                }
-            ]
-        }, 
-        {
-            "name": "fribidi", 
-            "make-args": [
-                "-j1"
-            ], 
-            "sources": [
-                {
-                    "type": "archive", 
-                    "url": "https://download.handbrake.fr/handbrake/contrib/fribidi-0.19.7.tar.gz", 
-                    "sha256": "3fc96fa9473bd31dcb5500bdf1aa78b337ba13eb8c301e7c28923fea982453a8"
+                    "url": "https://github.com/numactl/numactl/releases/download/v2.0.12/numactl-2.0.12.tar.gz", 
+                    "sha256": "55bbda363f5b32abd057b6fbb4551dd71323f5dbb66335ba758ba93de2ada729"
                 }
             ]
         }, 
@@ -88,7 +62,8 @@
             "no-autogen": true, 
             "config-opts": [
                 "--flatpak", 
-                "--disable-gtk-update-checks"
+                "--disable-gtk-update-checks", 
+                "--enable-qsv"
             ], 
             "builddir": true, 
             "post-install": [
@@ -96,31 +71,17 @@
             ], 
             "sources": [
                 {
-                    "url": "https://download.handbrake.fr/releases/1.2.1/HandBrake-1.2.1-source.tar.bz2", 
-                    "sha256": "00316eec7bb29b88b8dd11b14581c99c35fd7a315f5bc8cc7f1eb144b2fa783d", 
+                    "url": "https://download.handbrake.fr/releases/1.3.0/HandBrake-1.3.0-source.tar.bz2", 
+                    "sha256": "a9a82eb5ca04a793705b3d7d11cefa29946694eeb13b40161446aaca35b31d96", 
                     "type": "archive", 
                     "strip-components": 1
                 }, 
                 {
-                    "url": "https://download.handbrake.fr/contrib/opus-1.3.tar.gz", 
-                    "sha256": "4f3d69aefdf2dbaf9825408e452a8a414ffc60494c70633560700398820dc550", 
+                    "url": "https://download.handbrake.fr/handbrake/contrib/jansson-2.12.tar.bz2", 
+                    "sha256": "645d72cc5dbebd4df608d33988e55aa42a7661039e19a379fcbe5c79d1aee1d2", 
                     "type": "file", 
                     "dest": "download", 
-                    "dest-filename": "opus-1.3.tar.gz"
-                }, 
-                {
-                    "url": "https://download.handbrake.fr/handbrake/contrib/lame-3.100.tar.gz", 
-                    "sha256": "ddfe36cab873794038ae2c1210557ad34857a4b6bdc515785d1da9e175b1da1e", 
-                    "type": "file", 
-                    "dest": "download", 
-                    "dest-filename": "lame-3.100.tar.gz"
-                }, 
-                {
-                    "url": "https://download.handbrake.fr/handbrake/contrib/jansson-2.10.tar.bz2", 
-                    "sha256": "241125a55f739cd713808c4e0089986b8c3da746da8b384952912ad659fa2f5a", 
-                    "type": "file", 
-                    "dest": "download", 
-                    "dest-filename": "jansson-2.10.tar.bz2"
+                    "dest-filename": "jansson-2.12.tar.bz2"
                 }, 
                 {
                     "url": "https://download.handbrake.fr/handbrake/contrib/x264-snapshot-20180925-2245.tar.bz2", 
@@ -130,70 +91,63 @@
                     "dest-filename": "x264-snapshot-20180925-2245.tar.bz2"
                 }, 
                 {
-                    "url": "https://download.handbrake.fr/contrib/x265_2.9.tar.gz", 
-                    "sha256": "ebae687c84a39f54b995417c52a2fdde65a4e2e7ebac5730d251471304b91024", 
+                    "url": "https://download.handbrake.fr/contrib/x265_3.2.1.tar.gz", 
+                    "sha256": "fb9badcf92364fd3567f8b5aa0e5e952aeea7a39a2b864387cec31e3b58cbbcc", 
                     "type": "file", 
                     "dest": "download", 
-                    "dest-filename": "x265_2.9.tar.gz"
+                    "dest-filename": "x265_3.2.1.tar.gz"
                 }, 
                 {
-                    "url": "https://download.handbrake.fr/handbrake/contrib/ffmpeg-4.1.tar.bz2", 
-                    "sha256": "b684fb43244a5c4caae652af9022ed5d85ce15210835bce054a33fb26033a1a5", 
+                    "url": "https://download.handbrake.fr/handbrake/contrib/dav1d-0.5.1.tar.bz2", 
+                    "sha256": "0214d201a338e8418f805b68f9ad277e33d79c18594dee6eaf6dcd74db2674a9", 
                     "type": "file", 
                     "dest": "download", 
-                    "dest-filename": "ffmpeg-4.1.tar.bz2"
+                    "dest-filename": "dav1d-0.5.1.tar.bz2"
                 }, 
                 {
-                    "url": "https://download.handbrake.fr/contrib/libvpx-1.7.0.tar.gz", 
-                    "sha256": "1fec931eb5c94279ad219a5b6e0202358e94a93a90cfb1603578c326abfc1238", 
+                    "url": "https://download.handbrake.fr/handbrake/contrib/ffmpeg-4.2.1.tar.bz2", 
+                    "sha256": "682a9fa3f6864d7f0dbf224f86b129e337bc60286e0d00dffcd710998d521624", 
                     "type": "file", 
                     "dest": "download", 
-                    "dest-filename": "libvpx-1.7.0.tar.gz"
+                    "dest-filename": "ffmpeg-4.2.1.tar.bz2"
                 }, 
                 {
-                    "url": "https://download.handbrake.fr/handbrake/contrib/libdvdread-6.0.0.tar.bz2", 
-                    "sha256": "b33b1953b4860545b75f6efc06e01d9849e2ea4f797652263b0b4af6dd10f935", 
+                    "url": "https://download.handbrake.fr/handbrake/contrib/libdvdread-6.0.2.tar.bz2", 
+                    "sha256": "f91401af213b219cdde24b46c50a57f29301feb7f965678f1d7ed4632cc6feb0", 
                     "type": "file", 
                     "dest": "download", 
-                    "dest-filename": "libdvdread-6.0.0.tar.bz2"
+                    "dest-filename": "libdvdread-6.0.2.tar.bz2"
                 }, 
                 {
-                    "url": "https://download.handbrake.fr/handbrake/contrib/libdvdnav-6.0.0.tar.bz2", 
-                    "sha256": "f0a2711b08a021759792f8eb14bb82ff8a3c929bf88c33b64ffcddaa27935618", 
+                    "url": "https://download.handbrake.fr/handbrake/contrib/libdvdnav-6.0.1.tar.bz2", 
+                    "sha256": "e566a396f1950017088bfd760395b0565db44234195ada5413366c9d23926733", 
                     "type": "file", 
                     "dest": "download", 
-                    "dest-filename": "libdvdnav-6.0.0.tar.bz2"
+                    "dest-filename": "libdvdnav-6.0.1.tar.bz2"
                 }, 
                 {
-                    "url": "https://download.handbrake.fr/handbrake/contrib/libbluray-1.0.2.tar.bz2", 
-                    "sha256": "6d9e7c4e416f664c330d9fa5a05ad79a3fb39b95adfc3fd6910cbed503b7aeff", 
+                    "url": "https://download.handbrake.fr/handbrake/contrib/libbluray-1.1.2.tar.bz2", 
+                    "sha256": "a3dd452239b100dc9da0d01b30e1692693e2a332a7d29917bf84bb10ea7c0b42", 
                     "type": "file", 
                     "dest": "download", 
-                    "dest-filename": "libbluray-1.0.2.tar.bz2"
+                    "dest-filename": "libbluray-1.1.2.tar.bz2"
                 }, 
                 {
-                    "url": "https://download.handbrake.fr/contrib/nv-codec-headers-8.1.24.2.tar.gz", 
-                    "sha256": "2b339b2493f5b63b285dd660be05102af7d4ff2de9fcf3af94e48b5f91a3ca57", 
+                    "url": "https://download.handbrake.fr/contrib/mfx_dispatch-c200d83.tar.gz", 
+                    "sha256": "ec1da009e7c77fcc3e45ff665b30c9390437cd920f2951ccabf3d79e8d5703a9", 
                     "type": "file", 
                     "dest": "download", 
-                    "dest-filename": "nv-codec-headers-8.1.24.2.tar.gz"
+                    "dest-filename": "mfx_dispatch-c200d83.tar.gz"
+                }, 
+                {
+                    "url": "https://download.handbrake.fr/contrib/nv-codec-headers-9.0.18.1.tar.gz", 
+                    "sha256": "6181a5dac66a6990aa3baf10a77ae677f372b9068be9ef73abfd37b73fb4c745", 
+                    "type": "file", 
+                    "dest": "download", 
+                    "dest-filename": "nv-codec-headers-9.0.18.1.tar.gz"
                 }
             ], 
-            "modules": [
-                {
-                    "name": "nasm", 
-                    "cleanup": [
-                        "*"
-                    ], 
-                    "sources": [
-                        {
-                            "type": "archive", 
-                            "url": "http://www.nasm.us/pub/nasm/releasebuilds/2.13.02/nasm-2.13.02.tar.xz", 
-                            "sha256": "8ac3235f49a6838ff7a8d7ef7c19a4430d0deecc0c2d3e3e237b5e9f53291757"
-                        }
-                    ]
-                }
-            ]
+            "modules": []
         }
     ]
 }
