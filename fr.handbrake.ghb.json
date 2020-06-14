@@ -71,8 +71,8 @@
             ],
             "sources": [
                 {
-                    "url": "https://github.com/HandBrake/HandBrake/releases/download/1.3.2/HandBrake-1.3.2-source.tar.bz2",
-                    "sha256": "ec6feba97f426d545ec56cf1472eae5795d768bc1aec56c23bb76fc6b2ecf270",
+                    "url": "https://github.com/HandBrake/HandBrake/releases/download/1.3.3/HandBrake-1.3.3-source.tar.bz2",
+                    "sha256": "218a37d95f48b5e7cf285363d3ab16c314d97627a7a710cab3758902ae877f85",
                     "type": "archive",
                     "strip-components": 1
                 },
@@ -105,11 +105,11 @@
                     "dest-filename": "dav1d-0.5.1.tar.bz2"
                 },
                 {
-                    "url": "https://download.handbrake.fr/handbrake/contrib/ffmpeg-4.2.2.tar.bz2",
-                    "sha256": "b620d187c26f76ca19e74210a0336c3b8380b97730df5cdf45f3e69e89000e5c",
+                    "url": "https://download.handbrake.fr/handbrake/contrib/ffmpeg-4.2.3.tar.bz2",
+                    "sha256": "217eb211c33303b37c5521a5abe1f0140854d6810c6a6ee399456cc96356795e",
                     "type": "file",
                     "dest": "download",
-                    "dest-filename": "ffmpeg-4.2.2.tar.bz2"
+                    "dest-filename": "ffmpeg-4.2.3.tar.bz2"
                 },
                 {
                     "url": "https://download.handbrake.fr/handbrake/contrib/libdvdread-6.0.2.tar.bz2",
