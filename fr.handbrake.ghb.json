@@ -77,70 +77,70 @@
                     "strip-components": 1
                 },
                 {
-                    "url": "https://download.handbrake.fr/handbrake/contrib/jansson-2.12.tar.bz2",
+                    "url": "https://github.com/HandBrake/HandBrake-contribs/releases/download/contribs/jansson-2.12.tar.bz2",
                     "sha256": "645d72cc5dbebd4df608d33988e55aa42a7661039e19a379fcbe5c79d1aee1d2",
                     "type": "file",
                     "dest": "download",
                     "dest-filename": "jansson-2.12.tar.bz2"
                 },
                 {
-                    "url": "https://download.handbrake.fr/handbrake/contrib/x264-snapshot-20180925-2245.tar.bz2",
+                    "url": "https://github.com/HandBrake/HandBrake-contribs/releases/download/contribs/x264-snapshot-20180925-2245.tar.bz2",
                     "sha256": "207c668e5b149dae04648b74f1008ab457e57ea89ea96712eebe52a79884ca7c",
                     "type": "file",
                     "dest": "download",
                     "dest-filename": "x264-snapshot-20180925-2245.tar.bz2"
                 },
                 {
-                    "url": "https://download.handbrake.fr/contrib/x265_3.2.1.tar.gz",
+                    "url": "https://github.com/HandBrake/HandBrake-contribs/releases/download/contribs/x265_3.2.1.tar.gz",
                     "sha256": "fb9badcf92364fd3567f8b5aa0e5e952aeea7a39a2b864387cec31e3b58cbbcc",
                     "type": "file",
                     "dest": "download",
                     "dest-filename": "x265_3.2.1.tar.gz"
                 },
                 {
-                    "url": "https://download.handbrake.fr/handbrake/contrib/dav1d-0.5.1.tar.bz2",
+                    "url": "https://github.com/HandBrake/HandBrake-contribs/releases/download/contribs/dav1d-0.5.1.tar.bz2",
                     "sha256": "0214d201a338e8418f805b68f9ad277e33d79c18594dee6eaf6dcd74db2674a9",
                     "type": "file",
                     "dest": "download",
                     "dest-filename": "dav1d-0.5.1.tar.bz2"
                 },
                 {
-                    "url": "https://download.handbrake.fr/handbrake/contrib/ffmpeg-4.2.3.tar.bz2",
+                    "url": "https://github.com/HandBrake/HandBrake-contribs/releases/download/contribs/ffmpeg-4.2.3.tar.bz2",
                     "sha256": "217eb211c33303b37c5521a5abe1f0140854d6810c6a6ee399456cc96356795e",
                     "type": "file",
                     "dest": "download",
                     "dest-filename": "ffmpeg-4.2.3.tar.bz2"
                 },
                 {
-                    "url": "https://download.handbrake.fr/handbrake/contrib/libdvdread-6.0.2.tar.bz2",
+                    "url": "https://github.com/HandBrake/HandBrake-contribs/releases/download/contribs/libdvdread-6.0.2.tar.bz2",
                     "sha256": "f91401af213b219cdde24b46c50a57f29301feb7f965678f1d7ed4632cc6feb0",
                     "type": "file",
                     "dest": "download",
                     "dest-filename": "libdvdread-6.0.2.tar.bz2"
                 },
                 {
-                    "url": "https://download.handbrake.fr/handbrake/contrib/libdvdnav-6.0.1.tar.bz2",
+                    "url": "https://github.com/HandBrake/HandBrake-contribs/releases/download/contribs/libdvdnav-6.0.1.tar.bz2",
                     "sha256": "e566a396f1950017088bfd760395b0565db44234195ada5413366c9d23926733",
                     "type": "file",
                     "dest": "download",
                     "dest-filename": "libdvdnav-6.0.1.tar.bz2"
                 },
                 {
-                    "url": "https://download.handbrake.fr/handbrake/contrib/libbluray-1.1.2.tar.bz2",
+                    "url": "https://github.com/HandBrake/HandBrake-contribs/releases/download/contribs/libbluray-1.1.2.tar.bz2",
                     "sha256": "a3dd452239b100dc9da0d01b30e1692693e2a332a7d29917bf84bb10ea7c0b42",
                     "type": "file",
                     "dest": "download",
                     "dest-filename": "libbluray-1.1.2.tar.bz2"
                 },
                 {
-                    "url": "https://download.handbrake.fr/contrib/mfx_dispatch-c200d83.tar.gz",
+                    "url": "https://github.com/HandBrake/HandBrake-contribs/releases/download/contribs/mfx_dispatch-c200d83.tar.gz",
                     "sha256": "ec1da009e7c77fcc3e45ff665b30c9390437cd920f2951ccabf3d79e8d5703a9",
                     "type": "file",
                     "dest": "download",
                     "dest-filename": "mfx_dispatch-c200d83.tar.gz"
                 },
                 {
-                    "url": "https://download.handbrake.fr/contrib/nv-codec-headers-9.0.18.1.tar.gz",
+                    "url": "https://github.com/HandBrake/HandBrake-contribs/releases/download/contribs/nv-codec-headers-9.0.18.1.tar.gz",
                     "sha256": "6181a5dac66a6990aa3baf10a77ae677f372b9068be9ef73abfd37b73fb4c745",
                     "type": "file",
                     "dest": "download",
