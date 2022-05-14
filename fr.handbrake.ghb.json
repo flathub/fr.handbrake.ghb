@@ -1,7 +1,7 @@
 {
     "app-id": "fr.handbrake.ghb",
     "runtime": "org.gnome.Platform",
-    "runtime-version": "41",
+    "runtime-version": "43",
     "sdk": "org.gnome.Sdk",
     "command": "ghb",
     "finish-args": [
@@ -38,9 +38,14 @@
             "name": "numactl",
             "sources": [
                 {
-                    "type": "archive",
-                    "url": "https://github.com/numactl/numactl/releases/download/v2.0.13/numactl-2.0.13.tar.gz",
-                    "sha256": "991e254b867eb5951a44d2ae0bf1996a8ef0209e026911ef6c3ef4caf6f58c9a"
+                    "type": "git",
+                    "url": "https://github.com/numactl/numactl.git",
+                    "tag": "v2.0.16",
+                    "commit": "10285f1a1bad49306839b2c463936460b604e3ea",
+                    "x-checker-data": {
+                        "type": "git",
+                        "tag-pattern": "^v([\\d.]+)$"
+                    }
                 }
             ]
         },
@@ -53,9 +58,14 @@
             ],
             "sources": [
                 {
-                    "type": "archive",
-                    "url": "https://github.com/libass/libass/releases/download/0.15.2/libass-0.15.2.tar.gz",
-                    "sha256": "1b2a54dda819ef84fa2dee3069cf99748a886363d2adb630fde87fe046e2d1d5"
+                    "type": "git",
+                    "url": "https://github.com/libass/libass.git",
+                    "tag": "0.16.0",
+                    "commit": "1af6240c5d1e499326146e0b88c987e626b13c23",
+                    "x-checker-data": {
+                        "type": "git",
+                        "version-scheme": "semantic"
+                    }
                 }
             ]
         },
@@ -74,10 +84,15 @@
             ],
             "sources": [
                 {
-                    "url": "https://github.com/HandBrake/HandBrake/releases/download/1.5.1/HandBrake-1.5.1-source.tar.bz2",
-                    "sha256": "3999fe06d5309c819799a73a968a8ec3840e7840c2b64af8f5cdb7fd8c9430f0",
-                    "type": "archive",
-                    "strip-components": 1
+                    "type": "git",
+                    "url": "https://github.com/HandBrake/HandBrake.git",
+                    "tag": "1.5.1",
+                    "commit": "09690d61027d52e37a86f24ecff4bca7ee3a03b6",
+                    "x-checker-data": {
+                        "type": "git",
+                        "tag-pattern": "^([\\d.]+)$",
+                        "is-main-source": true
+                    }
                 },
                 {
                     "url": "https://github.com/HandBrake/HandBrake-contribs/releases/download/contribs/jansson-2.14.tar.bz2",
