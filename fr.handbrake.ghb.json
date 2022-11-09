@@ -1,4 +1,4 @@
-{
+	{
     "app-id": "fr.handbrake.ghb",
     "runtime": "org.gnome.Platform",
     "runtime-version": "43",
@@ -155,6 +155,10 @@
                     "type": "file",
                     "dest": "download",
                     "dest-filename": "nv-codec-headers-11.0.10.1.tar.gz"
+                },
+                {
+                    "type": "patch",
+                    "path": "icon.patch"
                 }
             ],
             "modules": []
