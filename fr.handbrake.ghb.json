@@ -1,4 +1,4 @@
-	{
+{
     "app-id": "fr.handbrake.ghb",
     "runtime": "org.gnome.Platform",
     "runtime-version": "43",
@@ -60,8 +60,8 @@
                 {
                     "type": "git",
                     "url": "https://github.com/libass/libass.git",
-                    "tag": "0.16.0",
-                    "commit": "1af6240c5d1e499326146e0b88c987e626b13c23",
+                    "tag": "0.17.0",
+                    "commit": "bef4b43ef1882b77f789f611d9cd24271ccdd65b",
                     "x-checker-data": {
                         "type": "git",
                         "version-scheme": "semantic"
@@ -86,8 +86,8 @@
                 {
                     "type": "git",
                     "url": "https://github.com/HandBrake/HandBrake.git",
-                    "tag": "1.5.1",
-                    "commit": "09690d61027d52e37a86f24ecff4bca7ee3a03b6",
+                    "tag": "1.6.1",
+                    "commit": "04413a27e6d616cddd98c2c6468aca2bf91b87b5",
                     "x-checker-data": {
                         "type": "git",
                         "tag-pattern": "^([\\d.]+)$",
