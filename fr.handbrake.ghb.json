@@ -1,8 +1,8 @@
 {
     "app-id": "fr.handbrake.ghb",
-    "runtime": "org.gnome.Platform",
-    "runtime-version": "43",
-    "sdk": "org.gnome.Sdk",
+    "runtime": "org.freedesktop.Platform",
+    "runtime-version": "22.08",
+    "sdk": "org.freedesktop.Sdk",
     "command": "ghb",
     "finish-args": [
         "--device=dri",
@@ -163,12 +163,12 @@
             ],
             "modules": [],
             "build-options": {
-                "append-path": "/usr/lib/sdk/llvm14/bin",
-                "prepend-ld-library-path": "/usr/lib/sdk/llvm14/lib"
+                "append-path": "/usr/lib/sdk/llvm16/bin",
+                "prepend-ld-library-path": "/usr/lib/sdk/llvm16/lib"
             }
         }
     ],
     "sdk-extensions": [
-        "org.freedesktop.Sdk.Extension.llvm14"
+        "org.freedesktop.Sdk.Extension.llvm16"
     ]
 }
