@@ -163,12 +163,12 @@
             ],
             "modules": [],
             "build-options": {
-                "append-path": "/usr/lib/sdk/llvm14/bin",
-                "prepend-ld-library-path": "/usr/lib/sdk/llvm14/lib"
+                "append-path": "/usr/lib/sdk/llvm17/bin",
+                "prepend-ld-library-path": "/usr/lib/sdk/llvm17/lib"
             }
         }
     ],
     "sdk-extensions": [
-        "org.freedesktop.Sdk.Extension.llvm14"
+        "org.freedesktop.Sdk.Extension.llvm17"
     ]
 }
