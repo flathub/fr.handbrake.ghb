@@ -76,8 +76,8 @@
             ],
             "sources": [
                 {
-                    "url": "https://github.com/HandBrake/HandBrake/releases/download/1.7.0/HandBrake-1.7.0-source.tar.bz2",
-                    "sha256": "0a1ad417e921175417af0761dc47f7ba950c72b6351ec0dcbea5a5398bd6f6de",
+                    "url": "https://github.com/HandBrake/HandBrake/releases/download/1.7.1/HandBrake-1.7.1-source.tar.bz2",
+                    "sha256": "733e42c8f254f6c2f8f6b40f0d3572fd49167ebf30742beae605effa16939edc",
                     "type": "archive",
                     "strip-components": 1
                 },
