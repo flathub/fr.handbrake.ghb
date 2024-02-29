@@ -64,11 +64,13 @@
                 "--enable-qsv",
                 "--enable-nvenc",
                 "--enable-nvdec",
-                "--enable-vce",
                 "--enable-libdovi"
             ],
             "build-options": {
-                "append-path": "/usr/lib/sdk/llvm16/bin",
+                "append-path": "/usr/lib/sdk/llvm16/bin:/usr/lib/sdk/rust-stable/bin",
+                "build-args": [
+                    "--share=network"
+                ],
                 "prepend-ld-library-path": "/usr/lib/sdk/llvm16/lib"
             },
             "builddir": true,
@@ -111,18 +113,18 @@
                     "dest-filename": "x265-snapshot-20230403-12776.tar.gz"
                 },
                 {
-                    "url": "https://github.com/HandBrake/HandBrake-contribs/releases/download/contribs/dav1d-1.3.0.tar.bz2",
-                    "sha256": "bde8db3d0583a4f3733bb5a4ac525556ffd03ab7dcd8a6e7c091bee28d9466b1",
+                    "url": "https://github.com/HandBrake/HandBrake-contribs/releases/download/contribs/dav1d-1.4.0.tar.bz2",
+                    "sha256": "7661648c95755db3d61857b3fdc427fa6d3271a573e84fd11c235441965e9397",
                     "type": "file",
                     "dest": "download",
-                    "dest-filename": "dav1d-1.3.0.tar.bz2"
+                    "dest-filename": "dav1d-1.4.0.tar.bz2"
                 },
                 {
-                    "url": "https://github.com/HandBrake/HandBrake-contribs/releases/download/contribs/SVT-AV1-v1.7.0.tar.gz",
-                    "sha256": "ce0973584f1a187aa4abf63f509ff8464397120878e322a3153f87e9c161fc4f",
+                    "url": "https://github.com/HandBrake/HandBrake-contribs/releases/download/contribs/SVT-AV1-v1.8.0.tar.gz",
+                    "sha256": "6b1f8a92f8f2767bf19144d5a2f42a0fcd90433a49311ad314f7e75bbb71dcb2",
                     "type": "file",
                     "dest": "download",
-                    "dest-filename": "SVT-AV1-v1.7.0.tar.gz"
+                    "dest-filename": "SVT-AV1-v1.8.0.tar.gz"
                 },
                 {
                     "url": "https://github.com/HandBrake/HandBrake-contribs/releases/download/contribs/zimg-3.0.5.tar.gz",
@@ -132,11 +134,11 @@
                     "dest-filename": "zimg-3.0.5.tar.gz"
                 },
                 {
-                    "url": "https://github.com/HandBrake/HandBrake-contribs/releases/download/contribs/ffmpeg-6.1.tar.bz2",
-                    "sha256": "eb7da3de7dd3ce48a9946ab447a7346bd11a3a85e6efb8f2c2ce637e7f547611",
+                    "url": "https://github.com/HandBrake/HandBrake-contribs/releases/download/contribs/ffmpeg-6.1.1.tar.bz2",
+                    "sha256": "5e3133939a61ef64ac9b47ffd29a5ea6e337a4023ef0ad972094b4da844e3a20",
                     "type": "file",
                     "dest": "download",
-                    "dest-filename": "ffmpeg-6.1.tar.bz2"
+                    "dest-filename": "ffmpeg-6.1.1.tar.bz2"
                 },
                 {
                     "url": "https://github.com/HandBrake/HandBrake-contribs/releases/download/contribs/libdvdread-6.1.3.tar.bz2",
@@ -167,6 +169,13 @@
                     "dest-filename": "oneVPL-2023.3.1.tar.gz"
                 },
                 {
+                    "url": "https://github.com/HandBrake/HandBrake-contribs/releases/download/contribs/AMF-1.4.30-slim.tar.gz",
+                    "sha256": "665bd83dc7facb407e9e32168e38f9a1e0f37cd3802f4409d3889a3bcaec908f",
+                    "type": "file",
+                    "dest": "download",
+                    "dest-filename": "AMF-1.4.30-slim.tar.gz"
+                },
+                {
                     "url": "https://github.com/HandBrake/HandBrake-contribs/releases/download/contribs/nv-codec-headers-12.1.14.0.tar.gz",
                     "sha256": "62b30ab37e4e9be0d0c5b37b8fee4b094e38e570984d56e1135a6b6c2c164c9f",
                     "type": "file",
@@ -179,13 +188,6 @@
                     "type": "file",
                     "dest": "download",
                     "dest-filename": "dovi_tool-libdovi-3.2.0.tar.gz"
-                },
-                {
-                    "url": "https://github.com/HandBrake/HandBrake-contribs/releases/download/contribs/AMF-1.4.30-slim.tar.gz",
-                    "sha256": "665bd83dc7facb407e9e32168e38f9a1e0f37cd3802f4409d3889a3bcaec908f",
-                    "type": "file",
-                    "dest": "download",
-                    "dest-filename": "AMF-1.4.30-slim.tar.gz"
                 }
             ],
             "modules": [],
@@ -201,6 +203,7 @@
         }
     ],
     "sdk-extensions": [
-        "org.freedesktop.Sdk.Extension.llvm16"
+        "org.freedesktop.Sdk.Extension.llvm16",
+        "org.freedesktop.Sdk.Extension.rust-stable"
     ]
 }
