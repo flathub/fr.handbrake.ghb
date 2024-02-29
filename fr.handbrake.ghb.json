@@ -178,7 +178,7 @@
                     "sha256": "23c339b08bf32b66144b8fe17bf9a39f2dc810a37f081e5bc50207af9ae99922",
                     "type": "file",
                     "dest": "download",
-                    "dest-filename": "libdovi-3.2.0.tar.gz"
+                    "dest-filename": "dovi_tool-libdovi-3.2.0.tar.gz"
                 },
                 {
                     "url": "https://github.com/HandBrake/HandBrake-contribs/releases/download/contribs/AMF-1.4.30-slim.tar.gz",
