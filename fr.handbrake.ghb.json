@@ -12,6 +12,7 @@
         "--filesystem=host",
         "--filesystem=xdg-run/gvfs",
         "--filesystem=xdg-run/gvfsd",
+        "--filesystem=xdg-config/gtk-3.0",
         "--talk-name=org.gtk.vfs.*",
         "--system-talk-name=org.freedesktop.login1",
         "--system-talk-name=org.freedesktop.UPower",
@@ -113,18 +114,18 @@
                     "dest-filename": "x265-snapshot-20230403-12776.tar.gz"
                 },
                 {
-                    "url": "https://github.com/HandBrake/HandBrake-contribs/releases/download/contribs/dav1d-1.4.0.tar.bz2",
-                    "sha256": "7661648c95755db3d61857b3fdc427fa6d3271a573e84fd11c235441965e9397",
+                    "url": "https://github.com/HandBrake/HandBrake-contribs/releases/download/contribs/dav1d-1.3.0.tar.bz2",
+                    "sha256": "bde8db3d0583a4f3733bb5a4ac525556ffd03ab7dcd8a6e7c091bee28d9466b1",
                     "type": "file",
                     "dest": "download",
-                    "dest-filename": "dav1d-1.4.0.tar.bz2"
+                    "dest-filename": "dav1d-1.3.0.tar.bz2"
                 },
                 {
-                    "url": "https://github.com/HandBrake/HandBrake-contribs/releases/download/contribs/SVT-AV1-v1.8.0.tar.gz",
-                    "sha256": "6b1f8a92f8f2767bf19144d5a2f42a0fcd90433a49311ad314f7e75bbb71dcb2",
+                    "url": "https://github.com/HandBrake/HandBrake-contribs/releases/download/contribs/SVT-AV1-v1.7.0.tar.gz",
+                    "sha256": "ce0973584f1a187aa4abf63f509ff8464397120878e322a3153f87e9c161fc4f",
                     "type": "file",
                     "dest": "download",
-                    "dest-filename": "SVT-AV1-v1.8.0.tar.gz"
+                    "dest-filename": "SVT-AV1-v1.7.0.tar.gz"
                 },
                 {
                     "url": "https://github.com/HandBrake/HandBrake-contribs/releases/download/contribs/zimg-3.0.5.tar.gz",
@@ -134,11 +135,11 @@
                     "dest-filename": "zimg-3.0.5.tar.gz"
                 },
                 {
-                    "url": "https://github.com/HandBrake/HandBrake-contribs/releases/download/contribs/ffmpeg-6.1.1.tar.bz2",
-                    "sha256": "5e3133939a61ef64ac9b47ffd29a5ea6e337a4023ef0ad972094b4da844e3a20",
+                    "url": "https://github.com/HandBrake/HandBrake-contribs/releases/download/contribs/ffmpeg-6.1.tar.bz2",
+                    "sha256": "eb7da3de7dd3ce48a9946ab447a7346bd11a3a85e6efb8f2c2ce637e7f547611",
                     "type": "file",
                     "dest": "download",
-                    "dest-filename": "ffmpeg-6.1.1.tar.bz2"
+                    "dest-filename": "ffmpeg-6.1.tar.bz2"
                 },
                 {
                     "url": "https://github.com/HandBrake/HandBrake-contribs/releases/download/contribs/libdvdread-6.1.3.tar.bz2",
