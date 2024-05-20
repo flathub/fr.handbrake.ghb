@@ -69,9 +69,6 @@
             ],
             "build-options": {
                 "append-path": "/usr/lib/sdk/llvm16/bin:/usr/lib/sdk/rust-stable/bin",
-                "build-args": [
-                    "--share=network"
-                ],
                 "prepend-ld-library-path": "/usr/lib/sdk/llvm16/lib"
             },
             "builddir": true,
