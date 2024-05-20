@@ -1,7 +1,7 @@
 {
     "app-id": "fr.handbrake.ghb",
     "runtime": "org.gnome.Platform",
-    "runtime-version": "45",
+    "runtime-version": "46",
     "sdk": "org.gnome.Sdk",
     "command": "ghb",
     "finish-args": [
@@ -39,14 +39,15 @@
                 {
                     "type": "git",
                     "url": "https://github.com/numactl/numactl.git",
-                    "tag": "v2.0.16",
-                    "commit": "10285f1a1bad49306839b2c463936460b604e3ea",
+                    "tag": "v2.0.18",
+                    "commit": "3871b1c42fc71bceadafd745d2eff5dddfc2d67e",
                     "x-checker-data": {
                         "type": "git",
                         "tag-pattern": "^v([\\d.]+)$"
                     }
                 }
             ],
+            "rm-configure": true,
             "cleanup": [
                 "/include",
                 "/lib/pkgconfig",
@@ -63,10 +64,14 @@
                 "--flatpak",
                 "--enable-qsv",
                 "--enable-nvenc",
-                "--enable-nvdec"
+                "--enable-nvdec",
+                "--enable-libdovi"
             ],
             "build-options": {
-                "append-path": "/usr/lib/sdk/llvm16/bin",
+                "append-path": "/usr/lib/sdk/llvm16/bin:/usr/lib/sdk/rust-stable/bin",
+                "build-args": [
+                    "--share=network"
+                ],
                 "prepend-ld-library-path": "/usr/lib/sdk/llvm16/lib"
             },
             "builddir": true,
@@ -75,17 +80,17 @@
             ],
             "sources": [
                 {
-                    "url": "https://github.com/HandBrake/HandBrake/releases/download/1.7.3/HandBrake-1.7.3-source.tar.bz2",
-                    "sha256": "228681e9f361a69f1e813a112e9029d90fcf89e54172e7ff1863ce1995eae79a",
+                    "url": "https://github.com/HandBrake/HandBrake/releases/download/1.8.0/HandBrake-1.8.0-source.tar.bz2",
+                    "sha256": "8b1df7d6aa7aa3c2e12978f3473e301c4b60b4fedc749b75aa6f310b80310cef",
                     "type": "archive",
                     "strip-components": 1
                 },
                 {
-                    "url": "https://github.com/HandBrake/HandBrake-contribs/releases/download/contribs/libass-0.17.1.tar.gz",
-                    "sha256": "d653be97198a0543c69111122173c41a99e0b91426f9e17f06a858982c2fb03d",
+                    "url": "https://github.com/HandBrake/HandBrake-contribs/releases/download/contribs2/libass-0.17.2.tar.gz",
+                    "sha256": "a9afb52bf76a2569263fe2038896774c991b35c0968342a03be708e56ea60c3b",
                     "type": "file",
                     "dest": "download",
-                    "dest-filename": "libass-0.17.1.tar.gz"
+                    "dest-filename": "libass-0.17.2.tar.gz"
                 },
                 {
                     "url": "https://github.com/HandBrake/HandBrake-contribs/releases/download/contribs/jansson-2.14.tar.bz2",
@@ -95,32 +100,32 @@
                     "dest-filename": "jansson-2.14.tar.bz2"
                 },
                 {
-                    "url": "https://github.com/HandBrake/HandBrake-contribs/releases/download/contribs/x264-snapshot-20230402-3107.tar.gz",
-                    "sha256": "d16a9a55d87f0bb0217c4fb2246748ea00859514b8eef5e8d5d4279cd53d3be9",
+                    "url": "https://github.com/HandBrake/HandBrake-contribs/releases/download/contribs/x264-snapshot-20240314-3186.tar.gz",
+                    "sha256": "e7f4311f6f84bcbf6587dcfc9a41c7459f4f0f7d8c0153270749947e41255b60",
                     "type": "file",
                     "dest": "download",
-                    "dest-filename": "x264-snapshot-20230402-3107.tar.gz"
+                    "dest-filename": "x264-snapshot-20240314-3186.tar.gz"
                 },
                 {
-                    "url": "https://github.com/HandBrake/HandBrake-contribs/releases/download/contribs/x265-snapshot-20230403-12776.tar.gz",
-                    "sha256": "23898695c5520e9e971d12e88125d5ad03ad67f462fc8ecaa016b48adad7cb20",
+                    "url": "https://github.com/HandBrake/HandBrake-contribs/releases/download/contribs/x265_3.6.tar.gz",
+                    "sha256": "663531f341c5389f460d730e62e10a4fcca3428ca2ca109693867bc5fe2e2807",
                     "type": "file",
                     "dest": "download",
-                    "dest-filename": "x265-snapshot-20230403-12776.tar.gz"
+                    "dest-filename": "x265_3.6.tar.gz"
                 },
                 {
-                    "url": "https://github.com/HandBrake/HandBrake-contribs/releases/download/contribs/dav1d-1.3.0.tar.bz2",
-                    "sha256": "bde8db3d0583a4f3733bb5a4ac525556ffd03ab7dcd8a6e7c091bee28d9466b1",
+                    "url": "https://github.com/HandBrake/HandBrake-contribs/releases/download/contribs/dav1d-1.4.1.tar.bz2",
+                    "sha256": "ab02c6c72c69b2b24726251f028b7cb57d5b3659eeec9f67f6cecb2322b127d8",
                     "type": "file",
                     "dest": "download",
-                    "dest-filename": "dav1d-1.3.0.tar.bz2"
+                    "dest-filename": "dav1d-1.4.1.tar.bz2"
                 },
                 {
-                    "url": "https://github.com/HandBrake/HandBrake-contribs/releases/download/contribs/SVT-AV1-v1.7.0.tar.gz",
-                    "sha256": "ce0973584f1a187aa4abf63f509ff8464397120878e322a3153f87e9c161fc4f",
+                    "url": "https://github.com/HandBrake/HandBrake-contribs/releases/download/contribs/SVT-AV1-v2.1.0.tar.gz",
+                    "sha256": "72a076807544f3b269518ab11656f77358284da7782cece497781ab64ed4cb8a",
                     "type": "file",
                     "dest": "download",
-                    "dest-filename": "SVT-AV1-v1.7.0.tar.gz"
+                    "dest-filename": "SVT-AV1-v2.1.0.tar.gz"
                 },
                 {
                     "url": "https://github.com/HandBrake/HandBrake-contribs/releases/download/contribs/zimg-3.0.5.tar.gz",
@@ -130,11 +135,11 @@
                     "dest-filename": "zimg-3.0.5.tar.gz"
                 },
                 {
-                    "url": "https://github.com/HandBrake/HandBrake-contribs/releases/download/contribs/ffmpeg-6.1.tar.bz2",
-                    "sha256": "eb7da3de7dd3ce48a9946ab447a7346bd11a3a85e6efb8f2c2ce637e7f547611",
+                    "url": "https://github.com/HandBrake/HandBrake-contribs/releases/download/contribs/ffmpeg-7.0.tar.bz2",
+                    "sha256": "a24d9074bf5523a65aaa9e7bd02afe4109ce79d69bd77d104fed3dab4b934d7a",
                     "type": "file",
                     "dest": "download",
-                    "dest-filename": "ffmpeg-6.1.tar.bz2"
+                    "dest-filename": "ffmpeg-7.0.tar.bz2"
                 },
                 {
                     "url": "https://github.com/HandBrake/HandBrake-contribs/releases/download/contribs/libdvdread-6.1.3.tar.bz2",
@@ -158,11 +163,18 @@
                     "dest-filename": "libbluray-1.3.4.tar.bz2"
                 },
                 {
-                    "url": "https://github.com/oneapi-src/oneVPL/archive/refs/tags/v2023.3.1.tar.gz",
-                    "sha256": "4411543519486a2450f6f5af06a077596e7888a551768594e9dfa2a46b23b6f5",
+                    "url": "https://github.com/intel/libvpl/archive/refs/tags/v2.10.1.tar.gz",
+                    "sha256": "524299a7b920ac0de1f6913ca90515858ea3a8ea2daaea60f8e0be62f22c8041",
                     "type": "file",
                     "dest": "download",
-                    "dest-filename": "oneVPL-2023.3.1.tar.gz"
+                    "dest-filename": "libvpl-2.10.1.tar.gz"
+                },
+                {
+                    "url": "https://github.com/HandBrake/HandBrake-contribs/releases/download/contribs/AMF-1.4.33-slim.tar.gz",
+                    "sha256": "ee4621bd653360ddefb3d87e53752a37a1e8d49494a439298f7bfb100182c7d9",
+                    "type": "file",
+                    "dest": "download",
+                    "dest-filename": "AMF-1.4.33.tar.gz"
                 },
                 {
                     "url": "https://github.com/HandBrake/HandBrake-contribs/releases/download/contribs/nv-codec-headers-12.1.14.0.tar.gz",
@@ -170,6 +182,13 @@
                     "type": "file",
                     "dest": "download",
                     "dest-filename": "nv-codec-headers-12.1.14.0.tar.gz"
+                },
+                {
+                    "url": "https://github.com/HandBrake/HandBrake-contribs/releases/download/contribs2/dovi_tool-libdovi-3.3.0_vendor.tar.gz",
+                    "sha256": "a0b10fcdd51c1268d1ffb210fd5cfe1079db8f349a330be5605e386067d46ed6",
+                    "type": "file",
+                    "dest": "download",
+                    "dest-filename": "dovi_tool-libdovi-3.3.0_vendor.tar.gz"
                 }
             ],
             "modules": [],
@@ -185,6 +204,7 @@
         }
     ],
     "sdk-extensions": [
-        "org.freedesktop.Sdk.Extension.llvm16"
+        "org.freedesktop.Sdk.Extension.llvm16",
+        "org.freedesktop.Sdk.Extension.rust-stable"
     ]
 }
