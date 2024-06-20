@@ -65,7 +65,8 @@
                 "--enable-qsv",
                 "--enable-nvenc",
                 "--enable-nvdec",
-                "--enable-libdovi"
+                "--enable-libdovi",
+                "--enable-vce"
             ],
             "build-options": {
                 "append-path": "/usr/lib/sdk/llvm16/bin:/usr/lib/sdk/rust-stable/bin",
