@@ -78,17 +78,17 @@
             ],
             "sources": [
                 {
-                    "url": "https://github.com/HandBrake/HandBrake/releases/download/1.8.1/HandBrake-1.8.1-source.tar.bz2",
-                    "sha256": "f411d54b1760b61b2361343ffa8f9d857f228cd477f885659e0322b619adee90",
+                    "url": "https://github.com/HandBrake/HandBrake/releases/download/1.8.2/HandBrake-1.8.2-source.tar.bz2",
+                    "sha256": "aba13abb550cc57847010b1a6bdf2c2cf76f5fcdf97616fa184b7f4639f5541b",
                     "type": "archive",
                     "strip-components": 1
                 },
                 {
-                    "url": "https://github.com/HandBrake/HandBrake-contribs/releases/download/contribs2/libass-0.17.2.tar.gz",
-                    "sha256": "a9afb52bf76a2569263fe2038896774c991b35c0968342a03be708e56ea60c3b",
+                    "url": "https://github.com/HandBrake/HandBrake-contribs/releases/download/contribs2/libass-0.17.3.tar.gz",
+                    "sha256": "da7c348deb6fa6c24507afab2dee7545ba5dd5bbf90a137bfe9e738f7df68537",
                     "type": "file",
                     "dest": "download",
-                    "dest-filename": "libass-0.17.2.tar.gz"
+                    "dest-filename": "libass-0.17.3.tar.gz"
                 },
                 {
                     "url": "https://github.com/HandBrake/HandBrake-contribs/releases/download/contribs/jansson-2.14.tar.bz2",
@@ -133,11 +133,11 @@
                     "dest-filename": "zimg-3.0.5.tar.gz"
                 },
                 {
-                    "url": "https://github.com/HandBrake/HandBrake-contribs/releases/download/contribs2/ffmpeg-7.0.1.tar.bz2",
-                    "sha256": "5e77e84b6434d656106fafe3bceccc77176449014f3eba24d33db3fbd0939dc9",
+                    "url": "https://github.com/HandBrake/HandBrake-contribs/releases/download/contribs2/ffmpeg-7.0.2.tar.bz2",
+                    "sha256": "1ed250407ea8f955cca2f1139da3229fbc13032a0802e4b744be195865ff1541",
                     "type": "file",
                     "dest": "download",
-                    "dest-filename": "ffmpeg-7.0.1.tar.bz2"
+                    "dest-filename": "ffmpeg-7.0.2.tar.bz2"
                 },
                 {
                     "url": "https://github.com/HandBrake/HandBrake-contribs/releases/download/contribs/libdvdread-6.1.3.tar.bz2",
