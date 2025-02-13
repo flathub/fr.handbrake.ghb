@@ -78,8 +78,8 @@
             ],
             "sources": [
                 {
-                    "url": "https://github.com/HandBrake/HandBrake/releases/download/1.9.0/HandBrake-1.9.0-source.tar.bz2",
-                    "sha256": "c15b451502f5c938798595df897a41290e8881b3efb8edd69ff7db2d985733b0",
+                    "url": "https://github.com/HandBrake/HandBrake/releases/download/1.9.1/HandBrake-1.9.1-source.tar.bz2",
+                    "sha256": "d7678a38664f00f2fe03679b15f70ecca15a44da858aa04c0fcf1d20266fe694",
                     "type": "archive",
                     "strip-components": 1
                 },
@@ -112,11 +112,11 @@
                     "dest-filename": "x265_4.1.tar.gz"
                 },
                 {
-                    "url": "https://github.com/HandBrake/HandBrake-contribs/releases/download/contribs2/dav1d-1.5.0.tar.bz2",
-                    "sha256": "a6ca64e34cec56ae1c2d359e1da5c5386ecd7a3a62f931d026ac4f2ff72ade64",
+                    "url": "https://github.com/HandBrake/HandBrake-contribs/releases/download/contribs2/dav1d-1.5.1.tar.bz2",
+                    "sha256": "4eddffd108f098e307b93c9da57b6125224dc5877b1b3d157b31be6ae8f1f093",
                     "type": "file",
                     "dest": "download",
-                    "dest-filename": "dav1d-1.5.0.tar.bz2"
+                    "dest-filename": "dav1d-1.5.1.tar.bz2"
                 },
                 {
                     "url": "https://github.com/HandBrake/HandBrake-contribs/releases/download/contribs2/SVT-AV1-v2.3.0.tar.gz",
