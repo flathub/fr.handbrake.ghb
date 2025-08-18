@@ -172,7 +172,7 @@
                     "sha256": "ef6db20a4b09d7394b0f63a3f996357aa050bb356fa48c2aa9d5be5b1adcd9dc",
                     "type": "file",
                     "dest": "download",
-                    "dest-filename": "AMF-1.4.36.tar.gz"
+                    "dest-filename": "AMF-1.4.36.0.tar.gz"
                 },
                 {
                     "url": "https://github.com/HandBrake/HandBrake-contribs/releases/download/contribs2/nv-codec-headers-13.0.19.0.tar.gz",
