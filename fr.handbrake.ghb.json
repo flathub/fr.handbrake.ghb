@@ -168,6 +168,13 @@
                     "dest-filename": "libvpl-2.15.0.tar.gz"
                 },
                 {
+                    "url": "https://github.com/HandBrake/HandBrake-contribs/releases/download/contribs2/AMF-1.4.36-slim.tar.gz",
+                    "sha256": "ef6db20a4b09d7394b0f63a3f996357aa050bb356fa48c2aa9d5be5b1adcd9dc",
+                    "type": "file",
+                    "dest": "download",
+                    "dest-filename": "AMF-1.4.36.tar.gz"
+                },
+                {
                     "url": "https://github.com/HandBrake/HandBrake-contribs/releases/download/contribs2/nv-codec-headers-13.0.19.0.tar.gz",
                     "sha256": "13da39edb3a40ed9713ae390ca89faa2f1202c9dda869ef306a8d4383e242bee",
                     "type": "file",
