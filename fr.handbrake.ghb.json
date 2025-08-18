@@ -65,6 +65,7 @@
                 "--enable-qsv",
                 "--enable-nvenc",
                 "--enable-nvdec",
+                "--enable-vce",
                 "--enable-libdovi"
             ],
             "build-options": {
