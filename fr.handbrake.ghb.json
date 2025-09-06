@@ -40,8 +40,8 @@
                 {
                     "type": "git",
                     "url": "https://github.com/numactl/numactl.git",
-                    "tag": "v2.0.18",
-                    "commit": "3871b1c42fc71bceadafd745d2eff5dddfc2d67e",
+                    "tag": "v2.0.19",
+                    "commit": "3bc85e37d5a30da6790cb7e8bb488bb8f679170f",
                     "x-checker-data": {
                         "type": "git",
                         "tag-pattern": "^v([\\d.]+)$"
