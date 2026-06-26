@@ -80,7 +80,7 @@
             "sources": [
                 {
                     "url": "https://github.com/HandBrake/HandBrake/releases/download/1.11.2/HandBrake-1.11.2-source.tar.bz2",
-                    "sha256": "sha256:12b046350f2422dc28783ff94229aff4ba5fe5e683431e057355d36163b2593a",
+                    "sha256": "12b046350f2422dc28783ff94229aff4ba5fe5e683431e057355d36163b2593a",
                     "type": "archive",
                     "strip-components": 1
                 },
