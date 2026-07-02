@@ -79,8 +79,8 @@
             ],
             "sources": [
                 {
-                    "url": "https://github.com/HandBrake/HandBrake/releases/download/1.11.1/HandBrake-1.11.1-source.tar.bz2",
-                    "sha256": "4ff6a8a57c9b1cea51025306e313eee423b0fa1a8b7799aeaa8d4d7c457a7310",
+                    "url": "https://github.com/HandBrake/HandBrake/releases/download/1.11.2/HandBrake-1.11.2-source.tar.bz2",
+                    "sha256": "12b046350f2422dc28783ff94229aff4ba5fe5e683431e057355d36163b2593a",
                     "type": "archive",
                     "strip-components": 1
                 },
@@ -120,11 +120,11 @@
                     "dest-filename": "dav1d-1.5.3.tar.bz2"
                 },
                 {
-                    "url": "https://github.com/HandBrake/HandBrake-contribs/releases/download/contribs2/SVT-AV1-v4.0.1.tar.gz",
-                    "sha256": "9c0f9a4327334c40a76d2f39940d8a1b2dd8b1358375a11c4715d516b90a65cb",
+                    "url": "https://github.com/HandBrake/HandBrake-contribs/releases/download/contribs2/SVT-AV1-v4.1.0.tar.gz",
+                    "sha256": "6c4c0c44ff0ba3d136d6f57f3a707f9de8e9c866f50f809c1d22a43f0d8c9583",
                     "type": "file",
                     "dest": "download",
-                    "dest-filename": "SVT-AV1-v4.0.1.tar.gz"
+                    "dest-filename": "SVT-AV1-v4.1.0.tar.gz"
                 },
                 {
                     "url": "https://github.com/HandBrake/HandBrake-contribs/releases/download/contribs2/zimg-snapshot-20250624.tar.gz",
@@ -134,11 +134,11 @@
                     "dest-filename": "zimg-snapshot-20250624.tar.gz"
                 },
                 {
-                    "url": "https://github.com/HandBrake/HandBrake-contribs/releases/download/contribs2/ffmpeg-8.0.1.tar.bz2",
-                    "sha256": "65ff433fab5727fb2dc41f1d508dc60e6192fea44cab2e0301194feee4bcf1d7",
+                    "url": "https://github.com/HandBrake/HandBrake-contribs/releases/download/contribs2/ffmpeg-8.0.2.tar.bz2",
+                    "sha256": "2a8b8840c0bc78f5ed1576f98eba7df00c05f87fd6d07fad16efcd9333016edf",
                     "type": "file",
                     "dest": "download",
-                    "dest-filename": "ffmpeg-8.0.1.tar.bz2"
+                    "dest-filename": "ffmpeg-8.0.2.tar.bz2"
                 },
                 {
                     "url": "https://github.com/HandBrake/HandBrake-contribs/releases/download/contribs2/libdvdread-7.0.1.tar.bz2",
