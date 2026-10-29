@@ -1,7 +1,7 @@
 {
     "app-id": "fr.handbrake.ghb",
     "runtime": "org.gnome.Platform",
-    "runtime-version": "49",
+    "runtime-version": "51",
     "sdk": "org.gnome.Sdk",
     "command": "ghb",
     "finish-args": [
@@ -70,8 +70,8 @@
                 "--enable-libdovi"
             ],
             "build-options": {
-                "append-path": "/usr/lib/sdk/llvm21/bin:/usr/lib/sdk/rust-stable/bin",
-                "prepend-ld-library-path": "/usr/lib/sdk/llvm21/lib"
+                "append-path": "/usr/lib/sdk/llvm22/bin:/usr/lib/sdk/rust-stable/bin",
+                "prepend-ld-library-path": "/usr/lib/sdk/llvm22/lib"
             },
             "builddir": true,
             "post-install": [
@@ -203,7 +203,7 @@
         }
     ],
     "sdk-extensions": [
-        "org.freedesktop.Sdk.Extension.llvm21",
+        "org.freedesktop.Sdk.Extension.llvm22",
         "org.freedesktop.Sdk.Extension.rust-stable"
     ]
 }
